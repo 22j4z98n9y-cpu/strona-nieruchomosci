@@ -11,7 +11,7 @@ h1{font-size:clamp(28px,6vw,46px);margin:20px 0 8px;line-height:1.13}
 h1 em{color:var(--yellow);font-style:normal}header p{color:#e1e9f4;margin:8px 0 20px;font-size:17px}
 .call{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--yellow);color:#101927;text-decoration:none;padding:13px 24px;border-radius:13px;font-weight:900;font-size:21px;box-shadow:0 9px 22px #0002}
 main{max-width:790px;margin:-15px auto 38px;padding:0 16px}section{background:white;border-radius:18px;margin:18px 0;padding:22px 24px;box-shadow:0 7px 24px #152d4a10}
-h2{font-size:23px;margin:0 0 12px}.lead{font-size:17px;margin:0 0 10px}
+h2{font-size:23px;margin:0 0 12px}h3{font-size:19px;margin:24px 0 10px;color:#16304b}.lead{font-size:17px;margin:0 0 10px}
 .pills{display:flex;gap:8px;flex-wrap:wrap}.pill{padding:7px 12px;background:#eef2f7;border-radius:99px;font-weight:700;font-size:14px}
 .price{display:flex;justify-content:space-between;gap:14px;border-top:1px solid #e6e9ef;padding:14px 0;align-items:baseline}
 .price strong{white-space:nowrap;font-size:20px;color:#12263d}
@@ -41,12 +41,27 @@ li{margin:8px 0}footer{text-align:center;color:#5c687b;font-size:13px;padding:20
 <p><strong>Jedź razem ze swoją rzeczą:</strong> samochód ma dwa miejsca dla pasażerów towarzyszących ładunkowi (oprócz kierowcy).</p>
 </section>
 <section><h2>Cennik orientacyjny – brutto</h2>
-<div class="price"><span><strong>MINI</strong> – do 30 minut i do 8 km w Olsztynie</span><strong>79 zł</strong></div>
-<div class="price"><span><strong>STANDARD</strong> – do 60 minut i do 15 km w Olsztynie</span><strong>129 zł</strong></div>
-<div class="price"><span>Każde kolejne rozpoczęte 15 minut po upływie 60 minut</span><strong>35 zł</strong></div>
-<div class="price"><span>Dodatkowy kilometr w mieście ponad limit pakietu</span><strong>3,50 zł</strong></div>
-<div class="price"><span>Trasa poza Olsztynem – cena za 1 km łącznej trasy</span><strong>3,50 zł/km</strong></div>
-<p class="muted">Czas w mieście liczony jest od przyjazdu pod adres odbioru do zakończenia zlecenia. Jeżeli przekroczysz limit MINI, wycena przechodzi na wariant STANDARD lub inny korzystniejszy uzgodniony sposób rozliczenia. W trasach poza miastem uwzględniamy dojazd, przewóz i powrót pojazdu; minimalna cena kursu poza miastem to 129 zł. Wszystkie kwoty są orientacyjne. <strong>Cenę całkowitą potwierdzamy przed kursem.</strong></p>
+<h3>Olsztyn – pakiety miejskie</h3>
+<p>W pakietach miejskich oba punkty: odbioru <strong>A</strong> i dostawy <strong>B</strong> znajdują się na terenie Olsztyna. <strong>Nie naliczamy opłaty za dojazd do miejsca odbioru.</strong></p>
+<div class="price"><span><strong>MINI</strong> – do 30 minut i 8 km od A do B</span><strong>79 zł</strong></div>
+<div class="price"><span><strong>STANDARD</strong> – do 60 minut i 15 km od A do B</span><strong>129 zł</strong></div>
+<h3>Strefa podmiejska – do 10 km poza granicami Olsztyna</h3>
+<p>Obsługujemy również miejscowości i osiedla położone do <strong>10 km drogą od granicy administracyjnej Olsztyna</strong>. Jeśli odbiór lub dostawa leży w tej strefie (a drugi punkt w Olsztynie lub tej samej strefie), <strong>dojazd samochodu do punktu A jest w cenie</strong>. Czas i kilometry liczymy dopiero od punktu odbioru A do punktu dostawy B.</p>
+<div class="price"><span><strong>PODMIEJSKI MINI</strong> – do 30 minut i 8 km od A do B</span><strong>109 zł</strong></div>
+<div class="price"><span><strong>PODMIEJSKI STANDARD</strong> – do 60 minut i 15 km od A do B</span><strong>149 zł</strong></div>
+<p class="muted">Wyższa cena pakietu podmiejskiego uwzględnia organizację obsługi szerszej strefy – nie dodajemy osobno opłaty ani kilometrów za podstawienie samochodu.</p>
+<h3>Dopłaty do pakietów miejskich i podmiejskich</h3>
+<div class="price"><span>Każde kolejne rozpoczęte 15 minut ponad limit 60 minut</span><strong>35 zł</strong></div>
+<div class="price"><span>Każdy kilometr od A do B ponad limit pakietu</span><strong>3,50 zł</strong></div>
+<p class="muted">Czas kursu liczymy od przyjazdu samochodu do punktu A do zakończenia zlecenia w punkcie B, z uwzględnieniem czasu przeznaczonego przez klienta na załadunek i rozładunek. Gdy przekroczysz MINI, wycenimy korzystniejszy dostępny wariant, w tym przejście na STANDARD.</p>
+<h3>Dalsze trasy – poza strefą podmiejską</h3>
+<p>Jeżeli co najmniej jeden punkt znajduje się ponad 10 km poza granicami Olsztyna (według trasy drogowej), stosujemy oddzielne rozliczenie obejmujące faktyczny przebieg pojazdu.</p>
+<div class="price"><span>Opłata podstawowa za zlecenie</span><strong>99 zł</strong></div>
+<div class="price"><span>Każdy kilometr pełnej trasy samochodu</span><strong>3,50 zł/km</strong></div>
+<div class="price"><span>Minimalna wartość zlecenia</span><strong>169 zł</strong></div>
+<div class="price"><span>Postój powyżej 20 minut łącznie – każde rozpoczęte 15 minut</span><strong>35 zł</strong></div>
+<p class="muted">Przy dalszych trasach pełny przebieg obejmuje wyjazd z bazy w Olsztynie, dojazd do punktu A, przejazd do punktu B oraz powrót do bazy. Długie lub nietypowe kursy wyceniamy indywidualnie.</p>
+<p><strong>Wszystkie ceny są orientacyjne. Końcową kwotę i termin potwierdzamy przed przyjęciem zlecenia.</strong></p>
 </section>
 <section><h2>Ważne warunki usługi</h2>
 <div class="note"><strong class="bad">Bez wnoszenia, noszenia i pakowania.</strong><div>Klient zapewnia załadunek i rozładunek, w tym potrzebne do tego osoby. Nie świadczymy usług przeprowadzkowych. Przedmiot musi być przygotowany do bezpiecznego przewozu.</div></div>
