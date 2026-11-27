@@ -15,6 +15,20 @@ main{max-width:790px;margin:-15px auto 38px;padding:0 16px}section{background:wh
 h2{font-size:23px;margin:0 0 12px}h3{font-size:19px;margin:24px 0 10px;color:#16304b}.lead{font-size:17px;margin:0 0 10px}
 .pills{display:flex;gap:8px;flex-wrap:wrap}.pill{padding:7px 12px;background:#eef2f7;border-radius:99px;font-weight:700;font-size:14px}
 .price{display:flex;justify-content:space-between;gap:14px;border-top:1px solid #e6e9ef;padding:14px 0;align-items:baseline}
+.table-scroll{width:100%;overflow-x:auto;border-radius:12px;margin:14px 0 18px;border:1px solid #dce3eb}
+table.tariff{border-collapse:collapse;width:100%;min-width:590px;background:white}
+table.tariff.two-col{min-width:420px}
+.tariff th,.tariff td{padding:13px 12px;border-bottom:1px solid #e5ebf0;text-align:left;vertical-align:middle}
+.tariff thead th{background:#10273f;color:white;font-weight:800}
+.tariff tbody tr:nth-child(even){background:#f5f8fb}
+.tariff tbody tr:last-child td,.tariff tbody tr:last-child th{border-bottom:0}
+.tariff .money{white-space:nowrap;font-size:18px;font-weight:900;color:#09233b}
+.dim-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.dim-card{padding:12px;border:1px solid #dbe4ec;border-radius:13px;background:#fbfdff}
+.dim-card h3{margin:2px 0 5px;font-size:16px}
+.dim-card svg{width:100%;height:auto;display:block}
+@media(max-width:630px){.dim-cards{grid-template-columns:1fr}.tariff th,.tariff td{padding:12px 9px;font-size:14px}.tariff .money{font-size:16px}}
+
 .price strong{white-space:nowrap;font-size:20px;color:#12263d}
 .note{border-radius:12px;background:#fff4d5;border-left:5px solid #eeb318;padding:14px 17px}
 small,.muted{color:#607084}.bad{font-weight:900;color:#a32014}
@@ -42,27 +56,82 @@ li{margin:8px 0}footer{text-align:center;color:#5c687b;font-size:13px;padding:20
 <p>Wykorzystujemy <strong>krótką Toyotę Proace City</strong>. Ładunek musi mieścić się w jej przestrzeni transportowej oraz dopuszczalnej ładowności. Potwierdzamy wymiary i wagę przed przyjęciem zamówienia.</p>
 <p><strong>Jedź razem ze swoją rzeczą:</strong> samochód ma dwa miejsca dla pasażerów towarzyszących ładunkowi (oprócz kierowcy).</p>
 </section>
-<section><h2>Cennik orientacyjny – brutto</h2>
-<h3>Olsztyn – pakiety miejskie</h3>
-<p>Oba punkty (odbioru <strong>A</strong> i dostawy <strong>B</strong>) znajdują się w granicach administracyjnych Olsztyna. <strong>Nie pobieramy opłaty za dojazd do punktu A.</strong></p>
-<div class="price"><span><strong>MINI</strong> – do 45 minut i do 8 km od A do B</span><strong>79 zł</strong></div>
-<div class="price"><span><strong>STANDARD</strong> – do 90 minut i do 15 km od A do B</span><strong>119 zł</strong></div>
-<h3>Strefa podmiejska – do 10 km poza granicą Olsztyna</h3>
-<p>Obejmuje adresy położone do <strong>10 km drogą od granicy administracyjnej Olsztyna</strong>. Punkt A i punkt B muszą znajdować się w Olsztynie lub w tej strefie. <strong>Nie doliczamy opłaty ani kilometrów za dojazd do miejsca odbioru A.</strong> Liczymy przewóz między punktami A i B.</p>
-<div class="price"><span><strong>PODMIEJSKI MINI</strong> – do 45 minut i do 8 km od A do B</span><strong>99 zł</strong></div>
-<div class="price"><span><strong>PODMIEJSKI STANDARD</strong> – do 90 minut i do 15 km od A do B</span><strong>139 zł</strong></div>
-<h3>Dopłaty do MINI i STANDARD – obie strefy</h3>
-<div class="price"><span><strong>Czas:</strong> każde rozpoczęte 15 minut ponad limit danego pakietu (45 min w MINI lub 90 min w STANDARD)</span><strong>35 zł</strong></div>
-<div class="price"><span><strong>Odległość:</strong> każdy dodatkowy kilometr od A do B ponad limit pakietu (8 km w MINI lub 15 km w STANDARD)</span><strong>3,50 zł/km</strong></div>
-<p class="muted">Dopłaty za czas i kilometry sumują się, jeśli przekroczone zostaną oba limity. Czas liczymy od przyjazdu pod punkt odbioru A do zakończenia kursu w punkcie B, wliczając czas na załadunek i rozładunek organizowane przez klienta. Odległość oznacza trasę przejazdu od A do B. Na etapie zamówienia pomożemy dobrać najbardziej opłacalny pakiet.</p>
+
+<section id="cennik">
+<h2>Cennik GABARYTAXI – ceny brutto</h2>
+<p class="lead">Pakiety obowiązują dla transportu pojedynczych większych rzeczy z punktu A do B. W Olsztynie i w strefie podmiejskiej do 10 km <strong>nie doliczamy opłaty za dojazd do miejsca odbioru.</strong></p>
+<div class="table-scroll"><table class="tariff">
+<thead><tr><th scope="col">Pakiet</th><th scope="col">Limit czasu i trasy A → B</th><th scope="col">Olsztyn</th><th scope="col">Strefa do 10 km poza miastem</th></tr></thead>
+<tbody>
+<tr><th scope="row">MINI</th><td>do 45 minut · do 8 km</td><td class="money">79 zł</td><td class="money">99 zł</td></tr>
+<tr><th scope="row">STANDARD</th><td>do 90 minut · do 15 km</td><td class="money">119 zł</td><td class="money">139 zł</td></tr>
+</tbody></table></div>
+<p class="muted">Pakiet miejski: oba adresy w granicach Olsztyna. Pakiet podmiejski: punkt odbioru i dostawy znajdują się w Olsztynie lub w strefie do 10 km drogą od jego granicy administracyjnej. Czas liczymy od przyjazdu do punktu A do zakończenia zlecenia w punkcie B; odległość to trasa od A do B, bez dojazdu samochodu do A.</p>
+<h3>Dopłaty po przekroczeniu limitów pakietu</h3>
+<div class="table-scroll"><table class="tariff two-col"><thead><tr><th scope="col">Rodzaj dopłaty</th><th scope="col">Cena brutto</th></tr></thead><tbody>
+<tr><td>Każde rozpoczęte 15 minut ponad limit czasu danego pakietu (45 lub 90 min)</td><td class="money">35 zł</td></tr>
+<tr><td>Każdy dodatkowy kilometr od A do B ponad limit danego pakietu (8 lub 15 km)</td><td class="money">3,50 zł/km</td></tr>
+</tbody></table></div>
+<p class="muted">Dopłaty za czas i kilometry sumują się, gdy przekroczone są oba limity. Dobieramy pakiet do przewidywanego czasu i długości zlecenia.</p>
 <h3>Dalsze trasy – poza strefą podmiejską</h3>
-<p>Jeśli co najmniej jeden punkt znajduje się <strong>ponad 10 km drogą od granicy administracyjnej Olsztyna</strong>, obowiązuje odrębna wycena:</p>
-<div class="price"><span>Opłata podstawowa</span><strong>99 zł</strong></div>
-<div class="price"><span>Każdy kilometr pełnej trasy samochodu</span><strong>3,50 zł/km</strong></div>
-<div class="price"><span>Minimalna wartość zlecenia</span><strong>169 zł</strong></div>
-<div class="price"><span>Postój powyżej 20 minut łącznie – każde kolejne rozpoczęte 15 minut</span><strong>35 zł</strong></div>
-<p class="muted">Przy dalszych trasach pełny przebieg obejmuje wyjazd z bazy w Olsztynie, dojazd do punktu A, przewóz do punktu B i powrót do bazy. Dłuższe lub nietypowe trasy wyceniamy indywidualnie.</p>
-<p><strong>Wszystkie kwoty są cenami brutto. Końcową wycenę i dostępność pojazdu potwierdzamy przed przyjęciem zlecenia.</strong></p>
+<div class="table-scroll"><table class="tariff two-col"><thead><tr><th scope="col">Zasada rozliczenia</th><th scope="col">Cena brutto</th></tr></thead><tbody>
+<tr><td>Opłata podstawowa</td><td class="money">99 zł</td></tr>
+<tr><td>Każdy kilometr pełnej trasy samochodu</td><td class="money">3,50 zł/km</td></tr>
+<tr><td>Minimalna cena zlecenia</td><td class="money">169 zł</td></tr>
+<tr><td>Postój ponad 20 minut łącznie – każde rozpoczęte 15 minut</td><td class="money">35 zł</td></tr>
+</tbody></table></div>
+<p class="muted">Przy dalszych trasach pełny przebieg obejmuje wyjazd z bazy w Olsztynie, dojazd do punktu A, transport do B i powrót do bazy. Dłuższe i nietypowe przewozy wyceniamy indywidualnie.</p>
+<div class="note"><strong>Końcową cenę i dostępność pojazdu potwierdzamy przed przyjęciem zlecenia.</strong></div>
+</section>
+<section id="wymiary">
+<h2>Wymiary przestrzeni ładunkowej</h2>
+<p class="lead"><strong>Toyota Proace City Standard L1 – krótka wersja, bez korzystania z przedłużenia Smart Cargo.</strong></p>
+<p>Sprawdź, czy Twój przedmiot zmieści się do naszego samochodu. Rysunki mają charakter schematyczny, a wymiary są wartościami katalogowymi – o przyjęciu ładunku decydują jego rzeczywiste gabaryty, masa oraz możliwość bezpiecznego załadunku.</p>
+<div class="dim-cards">
+<div class="dim-card">
+<h3>Widok z boku – długość i wysokość paki</h3>
+<svg role="img" aria-label="Schemat przestrzeni ładunkowej z boku: długość podłogi 181,7 cm i wysokość 124 cm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 290">
+<rect x="78" y="45" width="455" height="185" rx="13" fill="#edf3f7" stroke="#18324a" stroke-width="6"/>
+<rect x="92" y="61" width="424" height="154" rx="8" fill="white" stroke="#bdcbd7" stroke-width="3"/>
+<line x1="118" y1="187" x2="478" y2="187" stroke="#a8b9c6" stroke-width="3"/>
+<path d="M95 247 H514 M95 237 V258 M514 237 V258" stroke="#d79500" stroke-width="5" fill="none"/>
+<path d="M77 85 V211 M66 85 H88 M66 211 H88" stroke="#d79500" stroke-width="5" fill="none"/>
+<text x="305" y="274" text-anchor="middle" font-size="24" font-weight="800" fill="#19314b">181,7 cm długości</text>
+<text x="30" y="160" transform="rotate(-90 30 160)" text-anchor="middle" font-size="23" font-weight="800" fill="#19314b">124 cm wysokości</text>
+</svg>
+</div>
+<div class="dim-card">
+<h3>Widok od tyłu – szerokość paki</h3>
+<svg role="img" aria-label="Schemat przestrzeni ładunkowej od tyłu: maksymalna szerokość 163 cm, między nadkolami 122,9 cm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 290">
+<path d="M104 225 V75 Q104 52 132 52 H509 Q536 52 536 75 V225 H442 V177 H389 V225 H247 V177 H194 V225 Z" fill="#edf3f7" stroke="#18324a" stroke-width="6"/>
+<path d="M130 64 H510" stroke="#d79500" stroke-width="5"/>
+<path d="M130 56 V74 M510 56 V74" stroke="#d79500" stroke-width="5"/>
+<text x="320" y="43" text-anchor="middle" font-size="23" font-weight="800" fill="#19314b">163 cm maks.</text>
+<path d="M247 238 H389 M247 231 V246 M389 231 V246" stroke="#d79500" stroke-width="5" fill="none"/>
+<text x="318" y="270" text-anchor="middle" font-size="23" font-weight="800" fill="#19314b">122,9 cm między nadkolami</text>
+</svg>
+</div>
+<div class="dim-card">
+<h3>Otwór tylnych drzwi</h3>
+<svg role="img" aria-label="Schemat otworu tylnych drzwi: szerokość 124,1 cm, wysokość 119,6 cm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 290">
+<path d="M149 219 V67 Q149 46 174 46 H467 Q491 46 491 67 V219 Z" fill="white" stroke="#18324a" stroke-width="8"/>
+<path d="M164 245 H476 M164 236 V254 M476 236 V254" stroke="#d79500" stroke-width="5" fill="none"/>
+<text x="319" y="275" text-anchor="middle" font-size="23" font-weight="800" fill="#19314b">124,1 cm szerokości</text>
+<path d="M110 66 V215 M100 66 H120 M100 215 H120" stroke="#d79500" stroke-width="5" fill="none"/>
+<text x="79" y="143" transform="rotate(-90 79 143)" text-anchor="middle" font-size="23" font-weight="800" fill="#19314b">119,6 cm wysokości</text>
+</svg>
+</div>
+</div>
+<div class="table-scroll"><table class="tariff two-col"><thead><tr><th scope="col">Parametr</th><th scope="col">Wymiar katalogowy</th></tr></thead><tbody>
+<tr><td>Długość podłogi przestrzeni ładunkowej</td><td class="money">181,7 cm</td></tr>
+<tr><td>Wysokość przestrzeni ładunkowej</td><td class="money">124 cm</td></tr>
+<tr><td>Szerokość maksymalna przestrzeni</td><td class="money">163 cm</td></tr>
+<tr><td>Szerokość między nadkolami</td><td class="money">122,9 cm</td></tr>
+<tr><td>Szerokość otworu tylnych drzwi</td><td class="money">124,1 cm</td></tr>
+<tr><td>Wysokość otworu tylnych drzwi</td><td class="money">119,6 cm</td></tr>
+<tr><td>Objętość przestrzeni ładunkowej</td><td class="money">3,3 m³</td></tr>
+</tbody></table></div>
+<p class="muted">Dane katalogowe Toyoty Proace City Standard; wyposażenie, przegroda i wykładziny mogą ograniczać dostępną przestrzeń. Przed zamówieniem podaj długość, szerokość, wysokość i przybliżoną masę przedmiotu. Nie deklarujemy ładowności bez potwierdzenia danych konkretnego pojazdu.</p>
 </section>
 <section><h2>Ważne warunki usługi</h2>
 <div class="note"><strong class="bad">Bez wnoszenia, noszenia i pakowania.</strong><div>Klient zapewnia załadunek i rozładunek, w tym potrzebne do tego osoby. Nie świadczymy usług przeprowadzkowych. Przedmiot musi być przygotowany do bezpiecznego przewozu.</div></div>
